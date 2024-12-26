@@ -36,3 +36,7 @@ def option_price(S, K, T, v, option_type, date_str=None):
         raise ValueError("option_type unknown, available options are 'C' and 'P'")
   
     return option_price
+
+    print('Call Price: $', round(option_price(S=42, K=40, T=0.5, v=0.2, option_type='C', date_str='2024-01-01'), 2))
+    print('Put Price: $', round(option_price(S=42, K=40, T=0.5, v=0.2, option_type='P', date_str='2024-01-01'), 2))
+
