@@ -1,3 +1,8 @@
+from app.data.fetch_option_chain import fetch_option_chain
+import yfinance as yf
+from datetime import datetime
+from datetime import date
+
 def test_fetch_option_chain():
     """
     Test the fetch_option_chain function and display results for valid scenarios.

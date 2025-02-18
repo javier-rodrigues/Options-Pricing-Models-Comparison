@@ -1,3 +1,7 @@
+from app.analytics.get_similar_historical_options import get_similar_historical_options
+from app.analytics.run_backtest import run_backtest
+from datetime import date
+
 def test_run_backtest():
     """
     Test the run_backtest function by first fetching historical options using

@@ -1,4 +1,6 @@
-sample_data = [
+def sample_data():  
+
+    return [
     # Stock 1: Apple Inc. (AAPL) - Technology Sector
     {
         "ticker": "AAPL",

@@ -1,3 +1,6 @@
+from app.analytics.get_similar_historical_options import get_similar_historical_options
+from datetime import date
+
 def test_get_similar_historical_options():
     """
     Test the get_similar_historical_options function using sample data with relaxed filters.

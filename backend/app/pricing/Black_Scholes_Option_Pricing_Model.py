@@ -5,6 +5,7 @@ from scipy.stats import norm
 import yfinance as yf
 import pandas as pd
 from datetime import datetime
+from app.data.fetch_risk_free_rate import fetch_risk_free_rate
 
 
 

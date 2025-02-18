@@ -1,3 +1,5 @@
+from app.analytics.Calculate_Volatility_Historical import calculate_annualized_volatility
+
 def test_calculate_annualized_volatility():
     ticker = 'TSLA'
     start_date = '2024-04-01'

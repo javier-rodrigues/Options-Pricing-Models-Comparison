@@ -1,3 +1,6 @@
+from app.pricing.Black_Scholes_Option_Pricing_Model import option_price
+from app.data.fetch_risk_free_rate import fetch_risk_free_rate
+
 def test_option_price():
     try:
         # Fetch the risk-free rate

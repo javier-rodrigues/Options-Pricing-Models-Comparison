@@ -1,3 +1,7 @@
+from app.analytics.Calculate_Implied_Volatility_Market import calculate_implied_volatility
+from app.data.fetch_risk_free_rate import fetch_risk_free_rate
+
+
 def test_calculate_implied_volatility():
     # Fetch the risk-free rate
     r = fetch_risk_free_rate(date_str="2025-01-10")

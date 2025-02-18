@@ -3,6 +3,7 @@ from scipy.stats import norm
 from scipy.optimize import newton
 from datetime import datetime
 import pandas as pd
+from app.pricing.Black_Scholes_Option_Pricing_Model import option_price
 
 def calculate_implied_volatility(S: float, K: float, T: float, market_price: float, r: float, option_type: str, method: str = "newton") -> float:
     """

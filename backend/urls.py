@@ -16,10 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import options_screener, options_pricing, options_backtest
+from app.views import (
+    test_black_scholes,
+    test_binomial,
+    test_monte,
+    test_historical_options_screener,
+    test_backtest,
+    test_implied_volatility,
+    test_option_chain,
+)
 
 urlpatterns = [
-    path('api/options/screener', options_screener, name='options_screener'),
-    path('api/options/pricing', options_pricing, name='options_pricing'),
-    path('api/options/backtest', options_backtest, name='options_backtest'),
+    path('api/test_black_scholes', test_black_scholes, name='test_black_scholes'),
+    path('api/test_binomial', test_binomial, name='test_binomial'),
+    path('api/test_monte', test_monte, name='test_monte_carlo'),
+    path('api/test_historical_options_screener', test_historical_options_screener, name='test_historical_options_screener'),
+    path('api/test_backtest', test_backtest, name='test_backtest'),
+    path('api/test_implied_volatility', test_implied_volatility, name='test_implied_volatility'),
+    path('api/test_option_chain', test_option_chain, name='test_option_chain'),
 ]

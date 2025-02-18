@@ -2,6 +2,7 @@
 
 import numpy as np
 import math
+from app.data.fetch_risk_free_rate import fetch_risk_free_rate
 
 def binomial_tree(S: float, K: float, T: float, r: float, N: int, v: float, option_type: str) -> float:
     """

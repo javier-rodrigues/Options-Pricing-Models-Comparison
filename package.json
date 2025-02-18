@@ -1,7 +1,16 @@
 {
   "dependencies": {
     "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "django": "^99.99.99",
+    "react-bootstrap": "^2.10.9",
     "react-router-dom": "^7.1.1",
     "recharts": "^2.15.0"
   }
+
+  "scripts": {
+  "start": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+  "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
+  }
+
 }
