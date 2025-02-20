@@ -5,7 +5,7 @@ def test_binomial_tree():
     print("Running test_binomial_tree")
     try:
         # Fetch the risk-free rate
-        r = fetch_risk_free_rate(date_str="2024-01-01")
+        r = fetch_risk_free_rate()
         print(f"Risk-free rate fetched: {r}")
 
         # Prepare test cases

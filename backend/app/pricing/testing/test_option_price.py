@@ -4,7 +4,7 @@ from app.data.fetch_risk_free_rate import fetch_risk_free_rate
 def test_option_price():
     try:
         # Fetch the risk-free rate
-        r = fetch_risk_free_rate(date_str="2024-01-01")
+        r = fetch_risk_free_rate()
 
         # Validate the fetched risk-free rate
         if not isinstance(r, (float, int)):

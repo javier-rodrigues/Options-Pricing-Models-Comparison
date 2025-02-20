@@ -19,7 +19,8 @@ from django.urls import path
 from app.views import (
     test_black_scholes,
     test_binomial,
-    test_monte,
+    test_monte_carlo_antithetic,
+    test_monte_carlo_control,
     test_historical_options_screener,
     test_backtest,
     test_implied_volatility,
@@ -29,7 +30,8 @@ from app.views import (
 urlpatterns = [
     path('api/test_black_scholes', test_black_scholes, name='test_black_scholes'),
     path('api/test_binomial', test_binomial, name='test_binomial'),
-    path('api/test_monte', test_monte, name='test_monte_carlo'),
+    path('api/test_monte_carlo_antithetic', test_monte_carlo_antithetic, name='test_monte_carlo_antithetic'),
+    path('api/test_monte_carlo_control', test_monte_carlo_control, name='test_monte_carlo_control'),
     path('api/test_historical_options_screener', test_historical_options_screener, name='test_historical_options_screener'),
     path('api/test_backtest', test_backtest, name='test_backtest'),
     path('api/test_implied_volatility', test_implied_volatility, name='test_implied_volatility'),

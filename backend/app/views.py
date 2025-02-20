@@ -29,10 +29,18 @@ def test_binomial(request):
 
 
 @api_view(['GET'])
-def test_monte(request):
+def test_monte_carlo_antithetic(request):
     try:
-        test_monte_carlo()
-        return JsonResponse({"msg": "Monte Carlo function ran successfully!"})
+        test_monte_carlo(mc_type="antithetic")
+        return JsonResponse({"msg": "Monte Carlo Antithetic Variate function ran successfully!"})
+    except Exception as e:
+        return JsonResponse({"msg": f"Error in Monte Carlo: {str(e)}"}, status=500)
+
+@api_view(['GET'])
+def test_monte_carlo_control(request):
+    try:
+        test_monte_carlo(mc_type="control")
+        return JsonResponse({"msg": "Monte Carlo Control Variate function ran successfully!"})
     except Exception as e:
         return JsonResponse({"msg": f"Error in Monte Carlo: {str(e)}"}, status=500)
 

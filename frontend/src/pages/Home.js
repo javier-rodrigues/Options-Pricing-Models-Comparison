@@ -26,12 +26,21 @@ const Home = () => {
     }
   };
 
-  const runMonteCarlo = async () => {
+  const runMonteCarlo_CV = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/test_monte');
+      const response = await axios.get('http://127.0.0.1:8000/api/test_monte_carlo_control');
       setMessage(response.data.msg);
     } catch (error) {
-      setMessage('Error running Monte Carlo function');
+      setMessage('Error running Monte Carlo Control Variate function');
+    }
+  };
+
+  const runMonteCarlo_AV = async () => {
+    try {
+      const response = await axios.get('http://127.0.0.1:8000/api/test_monte_carlo_antithetic');
+      setMessage(response.data.msg);
+    } catch (error) {
+      setMessage('Error running Monte Carlo Antithetic Variate function');
     }
   };
 
@@ -87,7 +96,8 @@ const Home = () => {
         <div>
           <button onClick={runBlackScholes}>Run Black-Scholes</button>
           <button onClick={runBinomialTree}>Run Binomial Tree</button>
-          <button onClick={runMonteCarlo}>Run Monte Carlo</button>
+          <button onClick={runMonteCarlo_CV}>Run Monte Carlo Control Variate</button>
+          <button onClick={runMonteCarlo_AV}>Run Monte Carlo Antithetic Variate</button>
         </div>
       )}
 

@@ -18,6 +18,7 @@ platformdirs==4.3.6
 python-dateutil==2.9.0.post0
 pytz==2024.2
 requests==2.32.3
+scikit-learn==1.6.1
 scipy==1.10.1
 six==1.17.0
 soupsieve==2.6
@@ -25,4 +26,4 @@ sqlparse==0.5.3
 tzdata==2024.2
 urllib3==2.3.0
 webencodings==0.5.1
-yfinance==0.2.53
+yfinance==0.2.54
